@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+    api:
+        build: ./api
+        container_name: api_english_questions
+        ports:
+            - "8080:3000"
+        volumes:
+            - ./api/:/usr/app
+        stdin_open: true
+        command: npm start
+        links:
+            - mongoDB
+    mongoDB:
+        image: mongo:latest
+        ports:
+            - "27017:27017"
+    react:
+        build: ./web
+        container_name: react_english_questions
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./web/:/usr/app
+        stdin_open: true
+        command: npm start
+
