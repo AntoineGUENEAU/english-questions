@@ -1,19 +1,18 @@
 import React from "react";
 
-interface IpropsBtnChangeQuestion{
+interface IpropsBtnChangeQuestion {
     clickHandle: () => void;
 }
 
 export default function BtnChangeQuestion(props: IpropsBtnChangeQuestion) {
     const changeQuestion = () => {
-        props.clickHandle()
-    }
+        props.clickHandle();
+    };
     return (
-      <>
-          <div className="button" onClick={changeQuestion}>
-              <a href="#">Changé de question</a>
-          </div>
-      </>
-
+        <>
+            <div className="button" onClick={changeQuestion}>
+                <a href="#">Changé de question</a>
+            </div>
+        </>
     );
 }

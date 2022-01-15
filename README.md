@@ -15,5 +15,5 @@ This project is for me an exercise to practice frameworks and technologies :
 - cp docker-compose.yml.example docker-compose.yml
 - cp api/.env.example api/.env
 - cp web/.env.example web/.env
-- docker-composer up -d
+- docker-compose up -d --build
 - Go to http://localhost:3000

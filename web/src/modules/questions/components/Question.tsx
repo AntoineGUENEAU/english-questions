@@ -1,13 +1,9 @@
 import React from "react";
 
 interface IpropsQuestion {
-    question: string
+    question: string;
 }
 
 export default function Question(props: IpropsQuestion) {
-    return (
-        <p id="question">
-            { props.question }
-        </p>
-    );
+    return <p id="question">{props.question}</p>;
 }
